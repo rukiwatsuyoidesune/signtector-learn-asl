@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +15,17 @@ public class ListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
 
+        // Inisialisasi Toolbar dan set sebagai Action Bar
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        // Menambahkan teks pada Action Bar
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle("American Sign Language"); // Menetapkan judul di Action Bar
+            getSupportActionBar().setDisplayHomeAsUpEnabled(false); // Menonaktifkan tombol kembali
+        }
+
+        // Inisialisasi ListView dan data
         ListView listView = findViewById(R.id.listView);
 
         List<Item> items = new ArrayList<>();
@@ -58,4 +70,3 @@ public class ListActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
     }
 }
-

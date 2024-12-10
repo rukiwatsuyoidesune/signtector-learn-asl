@@ -23,7 +23,6 @@
         android:text="Item Title"
         android:fontFamily="@font/poppins_regular"
         android:textSize="24sp"
-        android:textStyle="bold"
         android:textColor="@android:color/black" />
 
 </LinearLayout>

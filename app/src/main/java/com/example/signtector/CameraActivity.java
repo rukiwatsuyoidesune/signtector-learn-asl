@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.File;
@@ -28,6 +29,7 @@ public class CameraActivity extends AppCompatActivity {
     private TextView resultText;
     private ImageButton captureButton;
     private ImageButton uploadButton;
+    private ImageButton reportButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +41,7 @@ public class CameraActivity extends AppCompatActivity {
         resultText = findViewById(R.id.result_text);
         captureButton = findViewById(R.id.btn_open_camera);
         uploadButton = findViewById(R.id.btn_upload_image);
+        reportButton = findViewById(R.id.btn_report);
 
         // Set onClickListener for capture button
         captureButton.setOnClickListener(v -> {
@@ -61,6 +64,20 @@ public class CameraActivity extends AppCompatActivity {
                 resultText.setText("Failed to open gallery: " + e.getMessage());
             }
         });
+
+        // Set onClickListener for report button
+        reportButton.setOnClickListener(v -> {
+            showReportDialog();
+        });
+    }
+
+    private void showReportDialog() {
+        new AlertDialog.Builder(this)
+                .setTitle("Report Issue")
+                .setMessage("Thank you for reporting an issue. Our team will review it shortly.")
+                .setPositiveButton("Ok", (dialog, which) -> dialog.dismiss())
+                .create()
+                .show();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)

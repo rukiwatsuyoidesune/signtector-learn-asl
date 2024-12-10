@@ -10,6 +10,8 @@ import androidx.core.view.WindowInsetsCompat;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
 import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,7 +23,10 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Signtector");
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        TextView userGreetingText = toolbar.findViewById(R.id.userGreetingText);
+        userGreetingText.setText("Hi, User");
 
         Button aslButton = findViewById(R.id.aslButton);
         Button listButton = findViewById(R.id.listButton);

@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -7,42 +6,82 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- Logo aplikasi -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="159dp"
+        android:layout_height="154dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Area untuk menampilkan gambar -->
     <ImageView
         android:id="@+id/image_view"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_margin="25dp"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_frame"
         android:contentDescription="Captured Image"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toTopOf="@+id/result_text"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Area untuk hasil prediksi -->
     <TextView
         android:id="@+id/result_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="Prediction result will appear here"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_regular"
-        android:textSize="16sp"
+        android:text="Prediction result will appear here"
+        android:textAlignment="center"
         android:textColor="@android:color/black"
+        android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@id/image_view"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
+    <!-- Tombol kamera -->
+    <ImageButton
         android:id="@+id/btn_open_camera"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ambil Foto"
-        android:fontFamily="@font/poppins_regular"
-        android:backgroundTint="@color/colorAccent"
-        android:drawableLeft="@drawable/ic_camera"
-        app:layout_constraintTop_toBottomOf="@id/result_text"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/circle_background"
+        android:contentDescription="Open Camera"
+        android:src="@drawable/ic_camera"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
 
+    <!-- Tombol unggah gambar -->
+    <ImageButton
+        android:id="@+id/btn_upload_image"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/circle_background"
+        android:contentDescription="Upload Image"
+        android:src="@drawable/ic_upload"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_open_camera" />
+
+    <!-- Tombol report -->
+    <ImageButton
+        android:id="@+id/btn_report"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/circle_background"
+        android:contentDescription="Report Issue"
+        android:src="@drawable/ic_report"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_open_camera" />
 </androidx.constraintlayout.widget.ConstraintLayout>

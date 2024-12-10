@@ -62,7 +62,7 @@ public class InferenceLocal {
                 String predictedClass = firstPrediction.getString("class");
                 double confidence = firstPrediction.getDouble("confidence");
 
-                result = "Class: " + predictedClass + "\nAccuracy: " + (confidence * 100) + "%";
+                result = String.format("Class: %s\nConfidence: %.2f%%", predictedClass, confidence * 100);
 
                 // Log untuk debugging (opsional)
                 Log.d("Inference Result", result);

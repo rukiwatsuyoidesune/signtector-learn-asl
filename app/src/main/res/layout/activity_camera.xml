@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!-- Logo aplikasi -->
     <ImageView
         android:id="@+id/logo"
         android:layout_width="159dp"
@@ -17,7 +16,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Area untuk menampilkan gambar -->
     <ImageView
         android:id="@+id/image_view"
         android:layout_width="350dp"
@@ -30,7 +28,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Area untuk hasil prediksi -->
     <TextView
         android:id="@+id/result_text"
         android:layout_width="0dp"
@@ -45,7 +42,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Tombol kamera -->
     <ImageButton
         android:id="@+id/btn_open_camera"
         android:layout_width="64dp"
@@ -59,7 +55,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5" />
 
-    <!-- Tombol unggah gambar -->
     <ImageButton
         android:id="@+id/btn_upload_image"
         android:layout_width="56dp"
@@ -72,7 +67,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btn_open_camera" />
 
-    <!-- Tombol report -->
     <ImageButton
         android:id="@+id/btn_report"
         android:layout_width="56dp"

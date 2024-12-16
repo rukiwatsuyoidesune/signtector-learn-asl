@@ -15,30 +15,17 @@ public class ListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
 
-        // Inisialisasi Toolbar dan set sebagai Action Bar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        // Menambahkan teks pada Action Bar
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("American Sign Language"); // Menetapkan judul di Action Bar
-            getSupportActionBar().setDisplayHomeAsUpEnabled(false); // Menonaktifkan tombol kembali
+            getSupportActionBar().setTitle("American Sign Language");
+            getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         }
 
-        // Inisialisasi ListView dan data
         ListView listView = findViewById(R.id.listView);
 
         List<Item> items = new ArrayList<>();
-        items.add(new Item("0 Zero", R.drawable.asl_zero));
-        items.add(new Item("1 One", R.drawable.asl_one));
-        items.add(new Item("2 Two", R.drawable.asl_two));
-        items.add(new Item("3 Three", R.drawable.asl_three));
-        items.add(new Item("4 Four", R.drawable.asl_four));
-        items.add(new Item("5 Five", R.drawable.asl_five));
-        items.add(new Item("6 Six", R.drawable.asl_six));
-        items.add(new Item("7 Seven", R.drawable.asl_seven));
-        items.add(new Item("8 Eight", R.drawable.asl_eight));
-        items.add(new Item("9 Nine", R.drawable.asl_nine));
         items.add(new Item("Aa", R.drawable.asl_a));
         items.add(new Item("Bb", R.drawable.asl_b));
         items.add(new Item("Cc", R.drawable.asl_c));

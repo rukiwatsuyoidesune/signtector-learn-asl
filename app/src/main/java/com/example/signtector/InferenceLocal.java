@@ -29,8 +29,8 @@ public class InferenceLocal {
             }
 
             // URL dan API Key
-            String API_KEY = "qbKYgEtoRT4pEKuE7NuU";
-            String MODEL_ENDPOINT = "sign-language-detection-fpqyh/1";
+            String API_KEY = "NC1LMe18lXRHK9WWq20L";
+            String MODEL_ENDPOINT = "american-sign-language-letters/6";
             String uploadURL = "https://detect.roboflow.com/" + MODEL_ENDPOINT + "?api_key=" + API_KEY;
 
             // Konfigurasi HTTP Request
